@@ -1,4 +1,5 @@
 import heroNetwork from "@/assets/hero-network.jpg";
+import logo from "@/assets/logo.png";
 import serviceCctv from "@/assets/service-cctv.jpg";
 import serviceInfra from "@/assets/service-infra.jpg";
 import serviceConsult from "@/assets/service-consult.jpg";
@@ -38,8 +39,14 @@ const services = [
 ];
 
 const clients = [
-  "Intertek", "Expro Ghana", "China Harbour", "Gateway Logistics",
-  "Western Royal", "Spring Architects", "CBM Solutions", "Taurus Transport",
+  "Intertek",
+  "Expro Ghana",
+  "China Harbour",
+  "Gateway Logistics",
+  "Western Royal",
+  "Spring Architects",
+  "CBM Solutions",
+  "Taurus Transport",
   "Toyomo Materials",
 ];
 
@@ -80,15 +87,27 @@ const Index = () => {
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 bg-paper/80 backdrop-blur-md border-b border-ink/10">
         <div className="max-w-[1500px] mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
-          <a href="#top" className="flex items-baseline gap-2">
-            <span className="font-display font-bold text-xl tracking-tight">ZESTEK</span>
-            <span className="label-mono text-ink/50 hidden sm:inline">/ EST. 2016</span>
+          <a href="#top" className="flex items-center gap-3">
+            <img
+              src={logo}
+              alt="Zestek — Zestteknologiez Ltd."
+              className="h-10 md:h-11 w-auto select-none"
+              draggable={false}
+            />
           </a>
           <nav className="hidden md:flex items-center gap-8 label-mono">
-            <a href="#services" className="hover:text-signal transition-colors">Services</a>
-            <a href="#work" className="hover:text-signal transition-colors">Work</a>
-            <a href="#about" className="hover:text-signal transition-colors">About</a>
-            <a href="#contact" className="hover:text-signal transition-colors">Contact</a>
+            <a href="#services" className="hover:text-signal transition-colors">
+              Services
+            </a>
+            <a href="#work" className="hover:text-signal transition-colors">
+              Work
+            </a>
+            <a href="#about" className="hover:text-signal transition-colors">
+              About
+            </a>
+            <a href="#contact" className="hover:text-signal transition-colors">
+              Contact
+            </a>
           </nav>
           <a
             href="#contact"
@@ -104,7 +123,9 @@ const Index = () => {
       <section id="top" className="relative pt-28 pb-16 lg:pt-36 lg:pb-24">
         <div className="max-w-[1500px] mx-auto px-6 lg:px-10">
           <div className="flex items-center gap-3 label-mono text-ink/60 mb-10">
-            <span className="ticker-dot">Operating from Ghana — serving Africa</span>
+            <span className="ticker-dot">
+              Operating from Ghana — serving Africa
+            </span>
           </div>
 
           <h1 className="font-display font-bold text-[14vw] sm:text-[12vw] lg:text-[10rem] xl:text-[12rem] leading-[0.85] tracking-tighter text-balance reveal-up">
@@ -118,9 +139,13 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-14">
             <div className="lg:col-span-5 lg:col-start-7">
               <p className="text-lg lg:text-xl text-ink/70 leading-relaxed text-balance">
-                Since 2016, <span className="text-ink font-medium">Zestteknologiez Limited</span> has
-                delivered surveillance, structured networking and IT infrastructure that businesses
-                across West Africa quietly depend on — every day, without drama.
+                Since 2016,{" "}
+                <span className="text-ink font-medium">
+                  Zestteknologiez Limited
+                </span>{" "}
+                has delivered surveillance, structured networking and IT
+                infrastructure that businesses across West Africa quietly depend
+                on — every day, without drama.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <a
@@ -130,7 +155,10 @@ const Index = () => {
                   Explore capabilities
                   <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
-                <a href="#work" className="label-mono underline underline-offset-8 decoration-ink/30 hover:decoration-signal hover:text-signal transition">
+                <a
+                  href="#work"
+                  className="label-mono underline underline-offset-8 decoration-ink/30 hover:decoration-signal hover:text-signal transition"
+                >
                   See selected work
                 </a>
               </div>
@@ -157,7 +185,9 @@ const Index = () => {
                 <span className="label-mono max-w-xs">
                   Network commissioning — Accra, GH
                 </span>
-                <span className="font-display text-2xl lg:text-4xl font-bold">2016 → ∞</span>
+                <span className="font-display text-2xl lg:text-4xl font-bold">
+                  2016 → ∞
+                </span>
               </div>
             </div>
           </div>
@@ -172,7 +202,9 @@ const Index = () => {
             ["24/7", "Surveillance uptime"],
           ].map(([n, l]) => (
             <div key={l}>
-              <div className="font-display text-5xl lg:text-6xl font-bold tracking-tighter">{n}</div>
+              <div className="font-display text-5xl lg:text-6xl font-bold tracking-tighter">
+                {n}
+              </div>
               <div className="label-mono text-ink/60 mt-2">{l}</div>
             </div>
           ))}
@@ -184,7 +216,9 @@ const Index = () => {
         <div className="flex whitespace-nowrap marquee">
           {[...clients, ...clients, ...clients].map((c, i) => (
             <div key={i} className="flex items-center gap-12 px-12">
-              <span className="font-display text-2xl lg:text-3xl font-medium">{c}</span>
+              <span className="font-display text-2xl lg:text-3xl font-medium">
+                {c}
+              </span>
               <span className="text-signal">✦</span>
             </div>
           ))}
@@ -195,7 +229,9 @@ const Index = () => {
       <section id="services" className="py-24 lg:py-36">
         <div className="max-w-[1500px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
-            <div className="lg:col-span-3 label-mono text-ink/60">// 01 — Capabilities</div>
+            <div className="lg:col-span-3 label-mono text-ink/60">
+              // 01 — Capabilities
+            </div>
             <h2 className="lg:col-span-9 font-display text-5xl lg:text-7xl font-bold tracking-tighter text-balance">
               Four disciplines.
               <br />
@@ -240,32 +276,39 @@ const Index = () => {
         <div className="max-w-[1500px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             <div className="lg:col-span-7">
-              <div className="label-mono text-paper/50 mb-8">// 02 — Position</div>
+              <div className="label-mono text-paper/50 mb-8">
+                // 02 — Position
+              </div>
               <h2 className="font-display text-5xl lg:text-7xl font-bold tracking-tighter leading-[0.95] text-balance">
                 We provide advanced equipment and services that{" "}
-                <span className="text-signal italic font-normal">differentiate</span> our clients
-                from competitors.
+                <span className="text-signal italic font-normal">
+                  differentiate
+                </span>{" "}
+                our clients from competitors.
               </h2>
               <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-2xl">
                 <div>
                   <div className="label-mono text-signal mb-3">Vision</div>
                   <p className="text-paper/80 leading-relaxed">
-                    Ignite global opportunities by aligning our clients with services and products
-                    that move with the world's growing technologies.
+                    Ignite global opportunities by aligning our clients with
+                    services and products that move with the world's growing
+                    technologies.
                   </p>
                 </div>
                 <div>
                   <div className="label-mono text-signal mb-3">Mission</div>
                   <p className="text-paper/80 leading-relaxed">
-                    Deliver expertise and modern IT solutions on time and on spec — with the
-                    accountability of a partner, not a vendor.
+                    Deliver expertise and modern IT solutions on time and on
+                    spec — with the accountability of a partner, not a vendor.
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-5 lg:border-l lg:border-paper/15 lg:pl-12">
-              <div className="label-mono text-paper/50 mb-8">// What we believe</div>
+              <div className="label-mono text-paper/50 mb-8">
+                // What we believe
+              </div>
               <ul className="divide-y divide-paper/15">
                 {values.map((v) => (
                   <li
@@ -288,7 +331,9 @@ const Index = () => {
       <section id="work" className="py-24 lg:py-36">
         <div className="max-w-[1500px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
-            <div className="lg:col-span-3 label-mono text-ink/60">// 03 — Track record</div>
+            <div className="lg:col-span-3 label-mono text-ink/60">
+              // 03 — Track record
+            </div>
             <h2 className="lg:col-span-9 font-display text-5xl lg:text-7xl font-bold tracking-tighter text-balance">
               Selected projects across
               <br />
@@ -311,7 +356,9 @@ const Index = () => {
                       <h3 className="font-display text-xl lg:text-2xl font-semibold mb-2">
                         {m.title}
                       </h3>
-                      <p className="opacity-80 leading-relaxed max-w-2xl">{m.body}</p>
+                      <p className="opacity-80 leading-relaxed max-w-2xl">
+                        {m.body}
+                      </p>
                     </div>
                   </li>
                 ))}
@@ -358,7 +405,9 @@ const Index = () => {
               },
             ].map((c, i) => (
               <div key={c.t} className="border-t-2 border-ink pt-8">
-                <span className="label-mono text-signal mb-4 block">0{i + 1}</span>
+                <span className="label-mono text-signal mb-4 block">
+                  0{i + 1}
+                </span>
                 <h3 className="font-display text-3xl lg:text-4xl font-bold tracking-tight mb-4">
                   {c.t}
                 </h3>
@@ -374,15 +423,21 @@ const Index = () => {
         <div className="max-w-[1500px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-7">
-              <div className="label-mono text-paper/50 mb-8">// 05 — Start a project</div>
+              <div className="label-mono text-paper/50 mb-8">
+                // 05 — Start a project
+              </div>
               <h2 className="font-display text-6xl lg:text-8xl xl:text-9xl font-bold tracking-tighter leading-[0.85] text-balance">
                 Let's build something
                 <br />
-                <span className="text-signal italic font-normal">resilient</span>.
+                <span className="text-signal italic font-normal">
+                  resilient
+                </span>
+                .
               </h2>
               <p className="mt-8 text-lg lg:text-xl text-paper/70 max-w-xl leading-relaxed">
-                Tell us about your site, your scope and your timeline. We'll come back with a clear
-                plan, a fair quote and a single point of contact.
+                Tell us about your site, your scope and your timeline. We'll
+                come back with a clear plan, a fair quote and a single point of
+                contact.
               </p>
             </div>
 
@@ -424,7 +479,10 @@ const Index = () => {
       {/* FOOTER */}
       <footer className="bg-ink text-paper border-t border-paper/15 py-10">
         <div className="max-w-[1500px] mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 label-mono text-paper/60">
-          <span>© {new Date().getFullYear()} Zestteknologiez Limited. All rights reserved.</span>
+          <span>
+            © {new Date().getFullYear()} Zestteknologiez Limited. All rights
+            reserved.
+          </span>
           <span>ZESTEK / Proactive Tech Enthusiast</span>
         </div>
       </footer>
