@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -13,7 +13,7 @@
 
     --ink: 20 14% 8%;
     --paper: 40 20% 97%;
-    --signal: 28 95% 54%;
+    --signal: 46 100% 47%;
     --signal-foreground: 20 14% 8%;
     --steel: 220 9% 22%;
     --mute: 30 8% 88%;
@@ -33,7 +33,7 @@
     --muted: 30 8% 92%;
     --muted-foreground: 20 8% 38%;
 
-    --accent: 28 95% 54%;
+    --accent: 46 100% 47%;
     --accent-foreground: 20 14% 8%;
 
     --destructive: 0 70% 45%;
@@ -41,7 +41,7 @@
 
     --border: 20 10% 85%;
     --input: 20 10% 85%;
-    --ring: 28 95% 54%;
+    --ring: 46 100% 47%;
 
     --radius: 0;
 
@@ -60,10 +60,12 @@
   * {
     @apply border-border;
   }
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: "Inter", system-ui, sans-serif;
     font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
   }
@@ -74,45 +76,71 @@
 }
 
 @layer utilities {
-  .font-display { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.03em; }
-  .font-mono { font-family: 'JetBrains Mono', monospace; }
+  .font-display {
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: -0.03em;
+  }
+  .font-mono {
+    font-family: "JetBrains Mono", monospace;
+  }
   .label-mono {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: "JetBrains Mono", monospace;
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.18em;
   }
-  .text-balance { text-wrap: balance; }
+  .text-balance {
+    text-wrap: balance;
+  }
   .grid-lines {
-    background-image:
-      linear-gradient(to right, hsl(var(--ink) / 0.06) 1px, transparent 1px);
+    background-image: linear-gradient(
+      to right,
+      hsl(var(--ink) / 0.06) 1px,
+      transparent 1px
+    );
     background-size: 8.333% 100%;
   }
   .marquee {
     animation: marquee 40s linear infinite;
   }
   @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
   .reveal-up {
     animation: revealUp 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
   }
   @keyframes revealUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   .ticker-dot::before {
     content: "";
     display: inline-block;
-    width: 6px; height: 6px;
+    width: 6px;
+    height: 6px;
     background: hsl(var(--signal));
     margin-right: 0.6rem;
     vertical-align: middle;
     animation: pulse 2s ease-in-out infinite;
   }
   @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
   }
 }
